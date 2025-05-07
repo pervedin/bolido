@@ -1,0 +1,23 @@
+0 silly argv {
+0 silly argv   _: [ 'clean' ],
+0 silly argv   yes: true,
+0 silly argv   y: true,
+0 silly argv   lernaVersion: '8.2.2',
+0 silly argv   '$0': 'node_modules\\lerna\\dist\\cli.js'
+0 silly argv }
+1 notice cli v8.2.2
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath C:\Bolagsverket\DevTools\Workspace\vedin-pp-se-bolido
+4 error JSONError: Expected double-quoted property name in JSON at position 292 while parsing '{  "name": "@vedin-pp-se/bolido-ab-nyb-' in packages\ab-nyb-app\package.json
+4 error
+4 error [0m [90m 11 |[39m   [32m"dependencies"[39m[33m:[39m {
+4 error  [90m 12 |[39m     [32m"@vedin-pp-se/bolido-kontaktuppgifter-ui"[39m[33m:[39m [32m"*"[39m[33m,[39m
+4 error [31m[1m>[22m[39m[90m 13 |[39m   }[33m,[39m
+4 error  [90m    |[39m   [31m[1m^[22m[39m
+4 error  [90m 14 |[39m   [32m"devDependencies"[39m[33m:[39m {
+4 error  [90m 15 |[39m     [32m"@vitejs/plugin-vue"[39m[33m:[39m [32m"^5.2.3"[39m[33m,[39m
+4 error  [90m 16 |[39m     [32m"@vue/tsconfig"[39m[33m:[39m [32m"^0.7.0"[39m[33m,[39m[0m
+4 error
+4 error     at parseJson (C:\Bolagsverket\DevTools\Workspace\vedin-pp-se-bolido\node_modules\parse-json\index.js:29:21)
+4 error     at parse (C:\Bolagsverket\DevTools\Workspace\vedin-pp-se-bolido\node_modules\load-json-file\index.js:15:9)
+4 error     at module.exports (C:\Bolagsverket\DevTools\Workspace\vedin-pp-se-bolido\node_modules\load-json-file\index.js:18:47)
