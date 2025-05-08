@@ -1,32 +1,24 @@
 <script setup lang="ts">
-import { ref, onBeforeMount } from "vue";
-import { Kontaktuppgifter, useKontaktuppgifterType, BPageHeader, useBPageHeaderType } from "@vedin-pp-se/bolido-vue";
 import { FLayoutApplicationTemplate } from "@fkui/vue";
-
-const kontaktuppgifter = ref(useKontaktuppgifterType());
-const pageheader = ref(useBPageHeaderType());
-
-onBeforeMount(async () => {
-    pageheader.value.headertitle = "Nyregistrering Aktiebolag";
-    pageheader.value.logoarialabel = "Bolido";
-    pageheader.value.righttext = "Per Vedin";
-});
+import Default from "./Default.vue";
+import Header from "./Header.vue";
+import Footer from "./Footer.vue";
 
 </script>
 
 <template>
     <f-layout-application-template>
         <template #header>
-            <b-page-header :pageheader="pageheader"/>
+            <Header />
         </template>
         <template #top-navigation>
             <p>Top navigation</p>
         </template>
         <template #default>
-           <Kontaktuppgifter :kontaktuppgifter="kontaktuppgifter" />
+           <Default />
         </template>
         <template #footer>
-            <p>Footer</p>
+            <Footer />
         </template>
     </f-layout-application-template>
 </template>
