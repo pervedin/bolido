@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
-  "main": "./src/index.ts",
-  "sass": "./src/style.scss",
+  "main": "./src/main.ts",
+  "sass": "./src/main.scss",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

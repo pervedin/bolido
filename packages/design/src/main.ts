@@ -1,2 +1,2 @@
 import "@fkui/icon-lib-default/dist/f";
-import './style.scss';
+import './main.scss';
