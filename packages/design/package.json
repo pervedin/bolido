@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@fkui/design": "^6.6.0",
+    "@fkui/icon-lib-default": "^6.6.0",
     "@fkui/theme-default": "^6.6.0",
     "sass": "^1.87.0",
     "typescript": "~5.8.3",

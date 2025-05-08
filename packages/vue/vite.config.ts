@@ -15,8 +15,8 @@ export default defineConfig({
     },
     lib: {
       entry: "./src/index.ts",
-      name: "kontaktuppgifter",
-      fileName: "kontaktuppgifter",
+      name: "bolido-vue",
+      fileName: "bolido-vue",
       formats: ["es", "umd", "cjs"],
     },
   },

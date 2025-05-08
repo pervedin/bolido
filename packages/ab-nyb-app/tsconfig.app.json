@@ -12,5 +12,5 @@
     "noUncheckedSideEffectImports": true
 
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "./typings/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
