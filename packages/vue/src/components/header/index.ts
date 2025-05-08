@@ -1,0 +1,1 @@
+export { default as BPageHeader } from "./BPageHeader.vue";
