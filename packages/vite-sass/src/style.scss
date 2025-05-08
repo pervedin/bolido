@@ -1,0 +1,153 @@
+@use "palette" as *;
+@use '@fkui/design';
+@use '@fkui/theme-default';
+
+:root {
+    color-scheme: light dark;
+
+    /* Header */
+    --f-background-pageheader-primary: light-dark(#{$palette-color-sten-100}, #{$palette-color-sten-100});
+
+     /* TEXT */
+     --fkds-color-text-primary: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-color-text-secondary: light-dark(#{$palette-color-sten-70}, #{$palette-color-sten-30});
+     --fkds-color-text-inverted: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-color-text-disabled: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+ 
+     /* BACKGROUND */
+     --fkds-color-background-primary: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-color-background-secondary: light-dark(#{$palette-color-sten-15}, #{$palette-color-sten-70});
+     --fkds-color-background-tertiary: light-dark(#{$palette-color-sten-30}, #{$palette-color-sten-50});
+     --fkds-color-background-disabled: light-dark(#{$palette-color-sten-15}, #{$palette-color-sten-70});
+ 
+     /* BACKGROUND – ACTION (select) */
+     --fkds-color-action-background-select-hover: light-dark(#{$palette-color-barr-15}, #{$palette-color-barr-85});
+     --fkds-color-action-background-select-default: light-dark(#{$palette-color-barr-85}, #{$palette-color-barr-15});
+ 
+     /* BACKGROUND – ACTION PRIMARY */
+     --fkds-color-action-background-primary-default: light-dark(#{$palette-color-hav-100}, #{$palette-color-hav-5});
+     --fkds-color-action-background-primary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+     --fkds-color-action-background-primary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+     --fkds-color-action-background-primary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+ 
+     /* BACKGROUND – ACTION SECONDARY */
+     --fkds-color-action-background-secondary-default: light-dark(#{$palette-color-hav-5}, #{$palette-color-hav-85});
+     --fkds-color-action-background-secondary-hover: light-dark(#{$palette-color-hav-15}, #{$palette-color-hav-50});
+     --fkds-color-action-background-secondary-active: light-dark(#{$palette-color-hav-15}, #{$palette-color-hav-50});
+     --fkds-color-action-background-secondary-focus: light-dark(#{$palette-color-hav-15}, #{$palette-color-hav-50});
+ 
+     /* BACKGROUND – ACTION ACCENT */
+     --fkds-color-action-background-accent-default: light-dark(#{$palette-color-barr-100}, #{$palette-color-barr-5});
+     --fkds-color-action-background-accent-hover: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-color-action-background-accent-active: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-color-action-background-accent-focus: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+ 
+     /* BACKGROUND – ACTION DISABLED */
+     --fkds-color-action-background-disabled: light-dark(#{$palette-color-sten-15}, #{$palette-color-sten-70});
+ 
+     /* ACTION – TEXT */
+     --fkds-color-action-text-primary-default: light-dark(#{$palette-color-hav-100}, #{$palette-color-white-100});
+     --fkds-color-action-text-primary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-color-action-text-primary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-color-action-text-primary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+ 
+     --fkds-color-action-text-secondary-default: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-color-action-text-secondary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-color-action-text-secondary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-color-action-text-secondary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+ 
+     --fkds-color-action-text-inverted-default: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-color-action-text-inverted-hover: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-color-action-text-inverted-active: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-color-action-text-inverted-focus: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+ 
+     --fkds-color-action-text-disabled: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+ 
+     /* ACTION – BORDER */
+     --fkds-color-action-border-primary-default: light-dark(#{$palette-color-hav-100}, #{$palette-color-hav-5});
+     --fkds-color-action-border-primary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+     --fkds-color-action-border-primary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+     --fkds-color-action-border-primary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-hav-15});
+ 
+     --fkds-color-action-border-accent-default: light-dark(#{$palette-color-barr-100}, #{$palette-color-barr-5});
+     --fkds-color-action-border-accent-hover: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-color-action-border-accent-active: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-color-action-border-accent-focus: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+ 
+     --fkds-color-action-border-disabled: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+ 
+     /* FEEDBACK – BACKGROUND */
+     --fkds-color-feedback-background-neutral: light-dark(#{$palette-color-sten-15}, #{$palette-color-sten-70});
+     --fkds-color-feedback-background-neutral-strong: light-dark(#{$palette-color-sten-30}, #{$palette-color-sten-50});
+     --fkds-color-feedback-background-info: light-dark(#{$palette-color-hav-5}, #{$palette-color-hav-100});
+     --fkds-color-feedback-background-info-strong: light-dark(#{$palette-color-hav-100}, #{$palette-color-hav-5});
+     --fkds-color-feedback-background-positive: light-dark(#{$palette-color-barr-5}, #{$palette-color-barr-100});
+     --fkds-color-feedback-background-positive-strong: light-dark(#{$palette-color-barr-85}, #{$palette-color-barr-15});
+     --fkds-color-feedback-background-warning: light-dark(#{$palette-color-sol-5}, #{$palette-color-sol-100});
+     --fkds-color-feedback-background-warning-strong: light-dark(#{$palette-color-sol-100}, #{$palette-color-sol-5});
+     --fkds-color-feedback-background-negative: light-dark(#{$palette-color-energi-5}, #{$palette-color-energi-100});
+     --fkds-color-feedback-background-negative-strong: light-dark(#{$palette-color-energi-100}, #{$palette-color-energi-5});
+ 
+     /* FEEDBACK – BORDER */
+     --fkds-color-feedback-border-neutral: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+     --fkds-color-feedback-border-info: light-dark(#{$palette-color-hav-100}, #{$palette-color-hav-5});
+     --fkds-color-feedback-border-positive: light-dark(#{$palette-color-barr-85}, #{$palette-color-barr-15});
+     --fkds-color-feedback-border-warning: light-dark(#{$palette-color-sol-100}, #{$palette-color-sol-5});
+     --fkds-color-feedback-border-negative: light-dark(#{$palette-color-energi-100}, #{$palette-color-energi-5});
+ 
+     /* FEEDBACK – TEXT */
+     --fkds-color-feedback-text-negative: light-dark(#{$palette-color-energi-100}, #{$palette-color-energi-5});
+ 
+     /* SELECT – BACKGROUND */
+     --fkds-color-select-background-primary-default: light-dark(#{$palette-color-barr-85}, #{$palette-color-barr-15});
+     --fkds-color-select-background-primary-hover: light-dark(#{$palette-color-barr-15}, #{$palette-color-barr-85});
+     --fkds-color-select-background-primary-active: light-dark(#{$palette-color-barr-15}, #{$palette-color-barr-85});
+     --fkds-color-select-background-primary-focus: light-dark(#{$palette-color-barr-15}, #{$palette-color-barr-85});
+ 
+     /* ICON */
+     --fkds-icon-color-content-primary: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-background-primary: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-icon-color-border-primary: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-content-disabled: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+ 
+     /* ICON – ACTION */
+     --fkds-icon-color-action-content-primary-default: light-dark(#{$palette-color-hav-100}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-primary-disabled: light-dark(#{$palette-color-sten-50}, #{$palette-color-sten-15});
+     --fkds-icon-color-action-content-primary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-primary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-primary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+ 
+     --fkds-icon-color-action-content-secondary-default: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-secondary-hover: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-secondary-active: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+     --fkds-icon-color-action-content-secondary-focus: light-dark(#{$palette-color-hav-120}, #{$palette-color-white-100});
+ 
+     --fkds-icon-color-action-content-accent-default: light-dark(#{$palette-color-barr-100}, #{$palette-color-barr-5});
+     --fkds-icon-color-action-content-accent-hover: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-icon-color-action-content-accent-active: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+     --fkds-icon-color-action-content-accent-focus: light-dark(#{$palette-color-barr-120}, #{$palette-color-barr-15});
+ 
+     --fkds-icon-color-action-content-weak-default: light-dark(#{$palette-color-sten-70}, #{$palette-color-sten-30});
+     --fkds-icon-color-action-content-inverted-default: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+     --fkds-icon-color-action-content-inverted-hover: light-dark(#{$palette-color-white-100}, #{$palette-color-sten-100});
+ 
+     /* ICON – FEEDBACK */
+     --fkds-icon-color-feedback-content-info: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-feedback-content-positive: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-feedback-content-warning: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+     --fkds-icon-color-feedback-content-negative: light-dark(#{$palette-color-sten-100}, #{$palette-color-white-100});
+ 
+     --fkds-icon-color-feedback-background-info: light-dark(#{$palette-color-hav-5}, #{$palette-color-hav-100});
+     --fkds-icon-color-feedback-background-positive: light-dark(#{$palette-color-barr-5}, #{$palette-color-barr-100});
+     --fkds-icon-color-feedback-background-warning: light-dark(#{$palette-color-sol-5}, #{$palette-color-sol-100});
+     --fkds-icon-color-feedback-background-negative: light-dark(#{$palette-color-energi-5}, #{$palette-color-energi-100});
+ 
+     --fkds-icon-color-feedback-border-info: light-dark(#{$palette-color-hav-100}, #{$palette-color-hav-5});
+     --fkds-icon-color-feedback-border-positive: light-dark(#{$palette-color-barr-85}, #{$palette-color-barr-15});
+     --fkds-icon-color-feedback-border-warning: light-dark(#{$palette-color-sol-100}, #{$palette-color-sol-5});
+     --fkds-icon-color-feedback-border-negative: light-dark(#{$palette-color-energi-100}, #{$palette-color-energi-5});
+ 
+     /* Vitt definieras separat */
+     --fkds-color-white-100: #ffffff;
+ 
+}

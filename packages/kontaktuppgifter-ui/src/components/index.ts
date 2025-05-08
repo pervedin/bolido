@@ -1,1 +1,1 @@
-export { Kontaktuppgifter } from "./kontaktuppgifter";
+export { Kontaktuppgifter, type KontaktuppgifterType, useKontaktuppgifterType } from "./kontaktuppgifter";

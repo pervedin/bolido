@@ -1,0 +1,53 @@
+/* Färger mappade från vår grafiska profil till Kassans semantiska struktur */
+
+/* FK-Black / Sten (baseras på Sten och varianter) */
+$palette-color-sten-100: hsla(220, 4%, 17%, 1) !default; // NY genererad variant
+$palette-color-sten-70: hsla(220, 4%, 31%, 1) !default; // motsvarande --sten
+$palette-color-sten-50: hsla(220, 4%, 52%, 1) !default; // genererad mellanvariant
+$palette-color-sten-30: hsla(0, 0%, 73%, 1) !default; // motsvarande --sten-ljus
+$palette-color-sten-20: hsla(220, 4%, 78%, 1) !default; // NY 20 genererad mellanvariant
+$palette-color-sten-15: hsla(220, 4%, 82%, 1) !default; // genererad mellanvariant
+$palette-color-sten-10: hsla(220, 4%, 89%, 1) !default; // NY 10 genererad mellanvariant
+$palette-color-sten-5: hsla(220, 4%, 96%, 1) !default; // NY 5 genererad mellanvariant
+$palette-color-white-100: #ffffff !default; // vit
+
+/* Hav (tidigare Bluebell) – baserade på hav, skymning, himmel och is */
+$palette-color-hav-140: hsla(212, 100%, 17%, 1) !default; // Motsvarare --midnatt
+$palette-color-hav-120: hsla(208, 100%, 30%, 1) !default; // Genererad mörkare variant (lite djupare än --hav)
+$palette-color-hav-100: hsla(208, 100%, 37%, 1) !default; // Motsvarar --hav
+$palette-color-hav-85: hsla(198, 100%, 43%, 1) !default; // Motsvarar --skymning
+$palette-color-hav-50: hsla(200, 65%, 73%, 1) !default; // Motsvarar --himmel
+$palette-color-hav-15: hsla(201, 82%, 89%, 1) !default; // Motsvarar --is
+$palette-color-hav-5: hsla(203, 89%, 96%, 1) !default; // Motsvarar --is-25
+
+/* Barr (tidigare Green A) – baserade på våra gröna toner */
+$palette-color-barr-120: hsla(120, 36%, 26%, 1) !default; // Motsvarar --barr
+$palette-color-barr-100: hsla(120, 36%, 40%, 1) !default; // Genererad mellanvariant
+$palette-color-barr-85: hsla(120, 36%, 55%, 1) !default; // Genererad mellanvariant
+$palette-color-barr-50: hsla(97, 40%, 77%, 1) !default; // Motsvarar --barr-ljus
+$palette-color-barr-15: hsla(120, 36%, 85%, 1) !default; // Genererad mellanvariant
+$palette-color-barr-5: hsla(120, 40%, 95%, 1) !default; // Nästan vit
+
+/* Sol (tidigare Yellow) – baserade på våra gula toner */
+$palette-color-sol-120: hsla(48, 100%, 50%, 1) !default; // Motsvarar --sol
+$palette-color-sol-100: hsla(48, 100%, 60%, 1) !default; // Genererad mellanvariant
+$palette-color-sol-85: hsla(46, 100%, 87%, 1) !default; // Motsvarar --sol-ljus
+$palette-color-sol-50: hsla(48, 100%, 92%, 1) !default; // Genererad mellanvariant
+$palette-color-sol-15: hsla(46, 100%, 96%, 1) !default; // Motsvarar --sol-25
+$palette-color-sol-5: hsla(48, 90%, 98%, 1) !default; // Nästan vit
+
+/* Energi (tidigare Red) – baserade på våra röda toner */
+$palette-color-energi-120: hsla(0, 79%, 46%, 1) !default; // Motsvarar --energi
+$palette-color-energi-100: hsla(0, 80%, 55%, 1) !default; // Genererad mellanvariant
+$palette-color-energi-85: hsla(0, 71%, 83%, 1) !default; // Motsvarar --energi-ljus
+$palette-color-energi-50: hsla(0, 70%, 88%, 1) !default; // Genererad mellanvariant
+$palette-color-energi-15: hsla(0, 71%, 94%, 1) !default; // Motsvarar --energi-25
+$palette-color-energi-5: hsla(0, 70%, 98%, 1) !default; // Nästan vit
+
+/* Apelsin (tidigare Orange) – baserade på våra orange toner */
+$palette-color-apelsin-120: hsla(31, 89%, 51%, 1) !default; // Motsvarar --apelsin
+$palette-color-apelsin-100: hsla(31, 90%, 58%, 1) !default; // Genererad mellanvariant
+$palette-color-apelsin-85: hsla(28, 93%, 84%, 1) !default; // Motsvarar --apelsin-ljus
+$palette-color-apelsin-50: hsla(31, 90%, 90%, 1) !default; // Genererad mellanvariant
+$palette-color-apelsin-15: hsla(28, 92%, 95%, 1) !default; // Motsvarar --apelsin-25
+$palette-color-apelsin-5: hsla(31, 90%, 98%, 1) !default; // Nästan vit
