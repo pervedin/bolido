@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@vedin-pp-se/bolido-design": "*",
-    "@vedin-pp-se/bolido-kontaktuppgifter-ui": "*"
+    "@vedin-pp-se/bolido-vue": "*"
   },
   "devDependencies": {
     "@fkui/icon-lib-default": "^6.6.0",

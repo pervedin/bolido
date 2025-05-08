@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { Kontaktuppgifter } from "@vedin-pp-se/bolido-kontaktuppgifter-ui";
+import { Kontaktuppgifter, useKontaktuppgifterType } from "@vedin-pp-se/bolido-vue";
 import { FLayoutApplicationTemplate, FPageHeader, FLogo } from "@fkui/vue";
-import { useKontaktuppgifterType } from "@vedin-pp-se/bolido-kontaktuppgifter-ui";
 
 const kontaktuppgifter = ref(useKontaktuppgifterType());
 
