@@ -1,6 +1,6 @@
 {
   "name": "@vedin-pp-se/bolido-tsconfig",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "Shared tsconfig.json presets for libraries and applications",
   "license": "MIT",
   "author": "Per Vedin",

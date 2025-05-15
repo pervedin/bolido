@@ -6,16 +6,12 @@
   "main": "./src/main.ts",
   "sass": "./src/main.scss",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@fkui/design": "^6.6.0",
     "@fkui/icon-lib-default": "^6.6.0",
     "@fkui/theme-default": "^6.6.0",
-    "sass": "^1.87.0",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5"
+    "sass": "^1.87.0"
   }
 }

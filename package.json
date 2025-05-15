@@ -6,10 +6,16 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^8.2.2"
+    "lerna": "^8.2.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "vue-tsc": "^2.2.8"
   },
   "scripts": {
     "build": "lerna run build --stream",
-    "link-all": "lerna exec npm link"
+    "link-all": "lerna exec npm link",
+    "dev:nybab": "lerna exec --scope @vedin-pp-se/bolido-ab-nyb-app -- vite"
   }
 }
