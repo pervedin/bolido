@@ -1,9 +1,7 @@
 {
   "name": "@vedin-pp-se/bolido-tsconfig",
+  "private": false,
   "version": "0.0.0",
-  "description": "Shared tsconfig.json presets for libraries and applications",
-  "license": "MIT",
-  "author": "Per Vedin",
   "exports": {
     "./cypress": "./presets/tsconfig-cypress.json",
     "./recommended": "./presets/tsconfig-recommended.json",
