@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FTextField, FPhoneTextField, FEmailTextField, FFieldset, FTooltip, FMessageBox } from "@fkui/vue";
+import { FTextField, FPhoneTextField, FEmailTextField, FFieldset, FTooltip } from "@fkui/vue";
 import { type KontaktuppgifterType, useKontaktuppgifterType } from "./Kontaktuppgifter";
 
 interface Props {
