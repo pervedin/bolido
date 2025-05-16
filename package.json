@@ -5,6 +5,14 @@
   "workspaces": [
     "packages/*"
   ],
+  "author": "Per Vedin",
+  "homepage": "https://www.vedin.pp.se",
+  "bugs": "https://github.com/pervedin/bolido/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pervedin/bolido.git"
+  },
+  "description": "Registrera nybildningar samt ändringar i din organisation",
   "keywords": [
     "FKDS",
     "Försäkringskassan",

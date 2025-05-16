@@ -13,53 +13,26 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 <template>
 
-<f-fieldset
-    id="foretagetsadress-fieldset"
-    name="foretagetsadress-fieldset">
+<f-fieldset>
 
     <template #label>Adressuppgifter</template>
 
     <template #tooltip>
         <f-tooltip
             screen-reader-text="Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende."
-            header-tag="h3"
-        >
-            <template #header>Läs mer om kontaktuppgifter</template>
+            header-tag="h3">
             <template #body>
-                Kontaktuppgifterna i ett ärende är en obligatorisk uppgift, dom används när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende.
+                Om en privatperson ska ansvara för föreningens post ska du skriva personens förnamn och efternamn i fältet C/o, exempelvis C/o Anna Andersson. Detta för att posten ska komma fram till föreningen.
+                Om du anmäler en e-postadress till föreningen får de ett meddelande från oss på Bolagsverket varje gång vi tar emot en anmälan som gäller föreningen.
             </template>
         </f-tooltip>
     </template>
 
-    <f-text-field v-model="props.foretagetsAdress.co">
-        <template #default>
-            C/o
-        </template>
-    </f-text-field>
-
-    <f-text-field v-model="props.foretagetsAdress.adress">
-        <template #default>
-            Adress
-        </template>
-    </f-text-field>
-
-    <f-text-field v-model="props.foretagetsAdress.postnummer" v-validation.required>
-        <template #default>
-            Postnummer
-        </template>
-    </f-text-field>
-
-    <f-text-field v-model="props.foretagetsAdress.postort">
-        <template #default>
-            Postort
-        </template>
-    </f-text-field>
-
-    <f-email-text-field v-model="props.foretagetsAdress.epost">
-        <template #default>
-            E-postadress
-        </template>
-    </f-email-text-field>
+    <f-text-field v-model="props.foretagetsAdress.co"> C/o </f-text-field>
+    <f-text-field v-model="props.foretagetsAdress.adress"> Adress </f-text-field>
+    <f-text-field v-model="props.foretagetsAdress.postnummer" v-validation.required> Postnummer </f-text-field>
+    <f-text-field v-model="props.foretagetsAdress.postort"> Postort </f-text-field>
+    <f-email-text-field v-model="props.foretagetsAdress.epost"> E-postadress </f-email-text-field>
 
 </f-fieldset>
 

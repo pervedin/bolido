@@ -24,32 +24,17 @@ const props = withDefaults(defineProps<Props>(), {
 
     <template #tooltip>
         <f-tooltip
-            screen-reader-text="Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används blad annat när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende."
-            header-tag="h3"
-        >
+            screen-reader-text="Bolagsverket skickar olika meddelanden, exempelvis föreläggande och registrerings bevis till kontaktpersonens e-postadress."
+            header-tag="h3">
             <template #body>
                 Bolagsverket skickar olika meddelanden, exempelvis föreläggande och registrerings bevis till kontaktpersonens e-postadress.
             </template>
         </f-tooltip>
     </template>
 
-    <f-text-field v-model="props.kontaktuppgifter.namn" v-validation.required>
-        <template #default>
-            Förnamn och efternamn
-        </template>
-    </f-text-field>
-
-    <f-email-text-field v-model="props.kontaktuppgifter.epost" v-validation.required extended-validation>
-        <template #default>
-            Mejladress
-        </template>
-    </f-email-text-field>
-    
-    <f-phone-text-field v-model="props.kontaktuppgifter.telefonnummer" v-validation.required>
-        <template #default>
-            Telefonnummer med landskod
-        </template>
-    </f-phone-text-field>
+    <f-text-field v-model="props.kontaktuppgifter.namn" v-validation.required> Förnamn och efternamn </f-text-field>
+    <f-email-text-field v-model="props.kontaktuppgifter.epost" v-validation.required extended-validation> Mejladress </f-email-text-field>
+    <f-phone-text-field v-model="props.kontaktuppgifter.telefonnummer" v-validation.required> Telefonnummer med landskod </f-phone-text-field>
 
 </f-fieldset>
 
