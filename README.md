@@ -1,3 +1,3 @@
 # bolido
 
-## Skapa nybildningar samt ändringa i Föreningar och Aktiebolag
+## Registrera nybildningar samt ändringar i din organisation

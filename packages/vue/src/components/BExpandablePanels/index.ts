@@ -1,1 +1,2 @@
 export { default as BExpandablePanelKontaktuppgifter } from "./BExpandablePanelKontaktuppgifter.vue";
+export { default as BExpandablePanelForetagetsAdress } from "./BExpandablePanelForetagetsAdress.vue";

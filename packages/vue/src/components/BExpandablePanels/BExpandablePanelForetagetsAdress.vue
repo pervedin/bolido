@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FExpandablePanel, FValidationForm  } from "@fkui/vue";
-import { BKontaktuppgifter, type KontaktuppgifterType } from "../BKontaktuppgifter";
+import { BForetagetsAdress, type ForetagetsAdressType } from "../BForetagetsAdress";
 import BExpandablePanelButtonSave from "./BExpandablePanelButtonSave.vue";
 import BExpandablePanelButtonCancel from "./BExpandablePanelButtonCancel.vue";
 
@@ -8,7 +8,7 @@ const emit = defineEmits(['toggle', 'submit', 'avbryt']);
 
 interface Props {
     panelName: string,
-    kontaktuppgifter: KontaktuppgifterType,
+    foretagetsAdress: ForetagetsAdressType,
     expanded: boolean,
     notifications?: number
 }
@@ -23,12 +23,12 @@ const onBeforeSubmit = async () => {
 </script>
 <template>
  <f-expandable-panel :expanded="props.expanded" @toggle="emit('toggle', props.panelName)" :notifications="props.notifications">
-    <template #title> Kontaktuppgifter i ärendet </template>
+    <template #title> Företagets adress </template>
     <f-validation-form
         @submit="emit('submit', props.panelName)"
         :before-submit="onBeforeSubmit"
     >
-        <b-kontaktuppgifter :kontaktuppgifter="props.kontaktuppgifter" />
+        <b-foretagets-adress :foretagets-adress="props.foretagetsAdress" />
         <b-expandable-panel-button-save />
         <b-expandable-panel-button-cancel @click="emit('avbryt')" />
     </f-validation-form>

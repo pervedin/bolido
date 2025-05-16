@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { FLayoutApplicationTemplate, FPageHeader, FLogo } from '@fkui/vue';
+
+interface Props {
+    title: string
+}
+
+const props = withDefaults(defineProps<Props>(), {});
+
 </script>
 <template>
     <f-layout-application-template>
@@ -16,6 +23,7 @@ import { FLayoutApplicationTemplate, FPageHeader, FLogo } from '@fkui/vue';
             <p>Top navigation</p>
         </template-->
         <template #default>
+            <h1>{{ props.title }}</h1>
             <slot />
         </template>
         <template #footer>
