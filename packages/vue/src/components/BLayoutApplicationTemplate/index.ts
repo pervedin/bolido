@@ -1,0 +1,1 @@
+export {default as BLayoutApplicationTemplate } from "./BLayoutApplicationTemplate.vue";

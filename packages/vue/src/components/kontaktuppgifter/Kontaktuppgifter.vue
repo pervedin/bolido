@@ -14,31 +14,28 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
 
-<f-fieldset>
-    <template #label>Kontaktuppgifter</template>
+<f-fieldset
+    id="kontaktuppgifter-fieldset"
+    name="kontaktuppgifter-fieldset">
+
+    <template #label>Kontaktperson</template>
+
     <template #description="{ descriptionClass }">
-        <span :class="descriptionClass">Fyll i kontaktuppgifter så att Bolagsverket vet vem dom ska kontakta i det här ärendet.</span>
+        <span :class="descriptionClass">Fyll i kontaktuppgifter till den person som du vill att Bolagsverket kontaktar om de har frågor i det här ärendet.</span>
     </template>
-    <template #error-message>
-        <f-message-box type="error">
-            <template #default="{ headingSlotClass }">
-                <h3 :class="headingSlotClass">Rubrik</h3>
-                <p>Brödtext</p>
-            </template>
-        </f-message-box>
-    </template>
+
     <template #tooltip>
         <f-tooltip
             screen-reader-text="Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende."
-            header-tag="h2"
+            header-tag="h3"
         >
-            <template #header>Läs mer om kontaktuppgifter</template>
             <template #body>
-                Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende.
+                Bolagsverket skickar olika meddelanden, exempelvis föreläggande och registrerings bevis till kontaktpersonens e-postadress.
             </template>
         </f-tooltip>
     </template>
-    <f-text-field v-model="props.kontaktuppgifter.namn">
+
+    <f-text-field v-model="props.kontaktuppgifter.namn" v-validation.required>
         <template #default>
             Förnamn och efternamn
         </template>
@@ -46,13 +43,13 @@ const props = withDefaults(defineProps<Props>(), {
 
     <f-email-text-field v-model="props.kontaktuppgifter.epost">
         <template #default>
-            Epostadress
+            E-postadress
         </template>
     </f-email-text-field>
 
     <f-email-text-field v-model="props.kontaktuppgifter.epost_validering">
         <template #default>
-            Bekräfta epostadress
+            Bekräfta e-postadress
         </template>
     </f-email-text-field>
     
@@ -61,6 +58,7 @@ const props = withDefaults(defineProps<Props>(), {
             Telefonnummer med landskod
         </template>
     </f-phone-text-field>
+
 </f-fieldset>
 
 </template>

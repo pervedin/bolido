@@ -7,7 +7,7 @@ export type KontaktuppgifterType = {
 }
 
 export function useKontaktuppgifterType(
-    kontaktuppgifter:KontaktuppgifterType = {} as KontaktuppgifterType) {
+    kontaktuppgifter:KontaktuppgifterType = {} as KontaktuppgifterType):KontaktuppgifterType {
 
         if(!kontaktuppgifter.hasOwnProperty("id")) kontaktuppgifter.id = crypto.randomUUID();
         if(!kontaktuppgifter.hasOwnProperty("namn")) kontaktuppgifter.namn = "";

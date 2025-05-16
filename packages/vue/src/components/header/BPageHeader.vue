@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FPageHeader } from '@fkui/vue';
+import { FPageHeader, FLogo } from '@fkui/vue';
 import { useBPageHeaderType, type BPageHeaderType } from './BPageHeaderType';
 
 interface Props {
