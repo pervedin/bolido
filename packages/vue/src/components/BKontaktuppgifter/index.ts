@@ -1,2 +1,2 @@
-export { default as Kontaktuppgifter } from "./Kontaktuppgifter.vue";
+export { default as BKontaktuppgifter } from "./BKontaktuppgifter.vue";
 export { type KontaktuppgifterType, useKontaktuppgifterType } from "./Kontaktuppgifter";

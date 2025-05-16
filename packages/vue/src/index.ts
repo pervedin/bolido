@@ -1,2 +1,2 @@
 export * from "./components";
-export { ValidationPlugin } from "@fkui/vue";
+export { ValidationPlugin as BValidationPlugin } from "@fkui/vue";
