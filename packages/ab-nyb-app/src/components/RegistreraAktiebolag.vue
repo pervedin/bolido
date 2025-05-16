@@ -32,7 +32,7 @@ const onBeforeSubmit = async () => {
 
 <template>
 
-    <f-expandable-panel :expanded="isOpen('KONTAKTUPPGIFTER')" @toggle="onToggle('KONTAKTUPPGIFTER')" :notifications="5">
+    <f-expandable-panel :expanded="isOpen('KONTAKTUPPGIFTER')" @toggle="onToggle('KONTAKTUPPGIFTER')" :notifications="1">
         <template #title>Kontaktuppgifter i ärendet</template>
         <f-validation-form 
             id="kontaktuppgifter-form"

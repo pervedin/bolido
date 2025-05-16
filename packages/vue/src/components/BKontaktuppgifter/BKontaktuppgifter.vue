@@ -14,9 +14,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
 
-<f-fieldset
-    id="kontaktuppgifter-fieldset"
-    name="kontaktuppgifter-fieldset">
+<f-fieldset>
 
     <template #label>Kontaktperson</template>
 
@@ -26,7 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
 
     <template #tooltip>
         <f-tooltip
-            screen-reader-text="Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende."
+            screen-reader-text="Kontaktuppgifterna i ett ärende är obligatoriska uppgifter, dom används blad annat när Bolagsverket behöver kontakta dig i frågor rörande ditt ärende."
             header-tag="h3"
         >
             <template #body>
@@ -41,19 +39,13 @@ const props = withDefaults(defineProps<Props>(), {
         </template>
     </f-text-field>
 
-    <f-email-text-field v-model="props.kontaktuppgifter.epost">
+    <f-email-text-field v-model="props.kontaktuppgifter.epost" v-validation.required extended-validation>
         <template #default>
-            E-postadress
-        </template>
-    </f-email-text-field>
-
-    <f-email-text-field v-model="props.kontaktuppgifter.epost_validering">
-        <template #default>
-            Bekräfta e-postadress
+            Mejladress
         </template>
     </f-email-text-field>
     
-    <f-phone-text-field v-model="props.kontaktuppgifter.telefonnummer">
+    <f-phone-text-field v-model="props.kontaktuppgifter.telefonnummer" v-validation.required>
         <template #default>
             Telefonnummer med landskod
         </template>
