@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FExpandablePanel, FValidationForm  } from "@fkui/vue";
-import type { KontaktuppgifterType } from "../BKontaktuppgifter";
+import { BKontaktuppgifter, type KontaktuppgifterType } from "../BKontaktuppgifter";
 
 const emit = defineEmits(['toggle', 'submit', 'spara', 'avbryt']);
 

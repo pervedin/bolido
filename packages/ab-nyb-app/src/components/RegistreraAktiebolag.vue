@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { BKontaktuppgifter, useKontaktuppgifterType, BForetagetsAdress, useForetagetsAdressType } from "@vedin-pp-se/bolido-vue";
+import { BKontaktuppgifter, useKontaktuppgifterType, BForetagetsAdress, useForetagetsAdressType, BExpandablePanelKontaktuppgifter } from "@vedin-pp-se/bolido-vue";
 import { FExpandablePanel, FValidationForm, FValidationFormAction  } from "@fkui/vue";
 
 const kontaktuppgifter = ref(useKontaktuppgifterType());
@@ -32,7 +32,17 @@ const onBeforeSubmit = async () => {
 
 <template>
 
-    <f-expandable-panel :expanded="isOpen('KONTAKTUPPGIFTER')" @toggle="onToggle('KONTAKTUPPGIFTER')" :notifications="1">
+    <b-expandable-panel-kontaktuppgifter
+        panelName="KONTAKTUPPGIFTER"
+        panelTitle="Kontaktuppgifter i ärendet"
+        :kontaktuppgifter="kontaktuppgifter"
+        :expanded="isOpen('KONTAKTUPPGIFTER')"
+        @toggle="onToggle"
+        @submit="onSubmit"
+    >
+    </b-expandable-panel-kontaktuppgifter>
+
+    <!--f-expandable-panel :expanded="isOpen('KONTAKTUPPGIFTER')" @toggle="onToggle('KONTAKTUPPGIFTER')" :notifications="1">
         <template #title>Kontaktuppgifter i ärendet</template>
         <f-validation-form 
             id="kontaktuppgifter-form"
@@ -44,7 +54,7 @@ const onBeforeSubmit = async () => {
                 Spara
             </button>
         </f-validation-form>
-    </f-expandable-panel>
+    </f-expandable-panel-->
 
     <f-expandable-panel :expanded="isOpen('FORETAGETSADRESS')" @toggle="onToggle('FORETAGETSADRESS')">
         <template #title>Företagets adress</template>
