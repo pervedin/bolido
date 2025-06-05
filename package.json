@@ -32,6 +32,6 @@
     "build": "lerna run build --stream",
     "link-all": "lerna exec npm link",
     "dev:nybab": "lerna exec --scope @vedin-pp-se/bolido-ab-nyb-app -- vite",
-    "version": "lerna version --no-git-tag-version --yes 0.0.1 && npm version 0.0.1"
+    "version": "lerna version --no-git-tag-version --yes 0.0.1"
   }
 }
