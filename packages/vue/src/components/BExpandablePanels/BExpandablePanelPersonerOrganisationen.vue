@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { FExpandablePanel, FValidationForm, FCard  } from "@fkui/vue";
+import { FExpandablePanel  } from "@fkui/vue";
 import BExpandablePanelButtonSave from "./BExpandablePanelButtonSave.vue";
 import BExpandablePanelButtonCancel from "./BExpandablePanelButtonCancel.vue";
 import { BPersonOrganisationCard,  type PersonOrganisationType } from "../BPersonOrganisation";
@@ -19,10 +18,12 @@ const props = withDefaults(defineProps<Props>(), {
     notifications: 0
 });
 
+/*
 const currentPersonOrganisationId = ref("");
 
 const onBeforeSubmit = async () => {
 }
+*/
 
 </script>
 <template>
