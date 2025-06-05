@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <f-fieldset>
 
-    <template #label>Kontaktperson</template>
+    <template #label> Kontaktperson </template>
 
     <template #description="{ descriptionClass }">
         <span :class="descriptionClass">Fyll i kontaktuppgifter till den person som du vill att Bolagsverket kontaktar om de har frågor i det här ärendet.</span>
