@@ -1,7 +1,7 @@
 {
   "name": "@vedin-pp-se/bolido-design",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "./src/main.ts",
   "sass": "./src/main.scss",
