@@ -4,7 +4,7 @@ import { BForetagetsAdress, type ForetagetsAdressType } from "../BForetagetsAdre
 import BExpandablePanelButtonSave from "./BExpandablePanelButtonSave.vue";
 import BExpandablePanelButtonCancel from "./BExpandablePanelButtonCancel.vue";
 
-const emit = defineEmits(['toggle', 'submit', 'avbryt']);
+const emit = defineEmits(['toggle', 'submit', 'avbryt', 'onBeforeSubmit']);
 
 interface Props {
     panelName: string,
@@ -18,6 +18,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const onBeforeSubmit = async () => {
+    emit('onBeforeSubmit', props.panelName);
+}
+
+const cancel = (e: Event) => {
+    emit("avbryt", props.panelName);
+    console.log(JSON.stringify(e));
 }
 
 </script>
@@ -30,7 +36,7 @@ const onBeforeSubmit = async () => {
     >
         <b-foretagets-adress :foretagets-adress="props.foretagetsAdress" />
         <b-expandable-panel-button-save />
-        <b-expandable-panel-button-cancel @click="emit('avbryt')" />
+        <b-expandable-panel-button-cancel @click="cancel" />
     </f-validation-form>
 </f-expandable-panel>
 </template>

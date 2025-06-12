@@ -26,12 +26,12 @@ const onSubmit = (panelName: string) => {
     console.log("onSubmit(" + panelName + ")");
     nuvarandeOppenPanel.value = "";
 }
-/*
-const onBeforeSubmit = async () => {
-    console.log("beforeKontaktuppgifterSubmit");
-    return FValidationFormAction.CONTINUE;
+
+const onBeforeSubmit = async (panelName: string) => {
+    console.log("onBeforeSubmit(" + panelName + ")");
+    //return FValidationFormAction.CONTINUE;
 }
-*/
+
 
 </script>
 
@@ -51,6 +51,7 @@ const onBeforeSubmit = async () => {
         :expanded="isOpen('FORETAGETSADRESS')"
         @toggle="onToggle"
         @submit="onSubmit"
+        @on-before-submit="onBeforeSubmit"
     />
 
     <!--f-expandable-panel :expanded="isOpen('SAMMANSTALLNING')" @toggle="onToggle('SAMMANSTALLNING')">

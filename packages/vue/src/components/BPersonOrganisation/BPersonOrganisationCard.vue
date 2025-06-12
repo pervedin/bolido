@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type PersonOrganisationType } from "../BPersonOrganisation";
+import { FCard } from "@fkui/vue";
 
 const emit = defineEmits(['spara', 'avbryt']);
 
@@ -11,5 +12,8 @@ const props = withDefaults(defineProps<Props>(), {});
 
 </script>
 <template>
-    <p>{{ props.personOrganisation }}</p>
+    <f-card>
+
+        <p>{{ props.personOrganisation }}</p>
+    </f-card>
 </template>

@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<Props>(), {});
     <f-layout-application-template>
         <template #header>
             <f-page-header>
-                Registrera ändring i ditt företag eller förening
+                Bolido
                 <template #logo>
                     <f-logo size="small">Bolido</f-logo>
                 </template>
