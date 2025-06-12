@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { FExpandablePanel, FValidationForm  } from "@fkui/vue";
 import { BForetagetsAdress, type ForetagetsAdressType } from "../BForetagetsAdress";
-import BExpandablePanelButtonSave from "./BExpandablePanelButtonSave.vue";
-import BExpandablePanelButtonCancel from "./BExpandablePanelButtonCancel.vue";
+import BExpandablePanelButtonGroup from "./BExpandablePanelButtonGroup.vue";
 
-const emit = defineEmits(['toggle', 'submit', 'avbryt', 'onBeforeSubmit']);
+const emit = defineEmits(['toggle', 'submit', 'cancel', 'beforeSubmit', 'beforeValidation']);
 
 interface Props {
     panelName: string,
@@ -17,26 +16,38 @@ const props = withDefaults(defineProps<Props>(), {
     notifications: 0
 });
 
-const onBeforeSubmit = async () => {
-    emit('onBeforeSubmit', props.panelName);
+const onToggle = () => {
+    emit('toggle', props.panelName);
 }
 
-const cancel = (e: Event) => {
-    emit("avbryt", props.panelName);
-    console.log(JSON.stringify(e));
+const onSubmit = () => {
+    emit('submit', props.panelName);
+}
+
+const onBeforeSubmit = async () => {
+    emit('beforeSubmit', props.panelName);
+}
+
+const onCancel = () => {
+    emit('cancel', props.panelName);
+}
+
+const onBeforeValidation = () => {
+    emit('beforeValidation', props.panelName);
 }
 
 </script>
 <template>
- <f-expandable-panel :expanded="props.expanded" @toggle="emit('toggle', props.panelName)" :notifications="props.notifications">
+ <f-expandable-panel :expanded="props.expanded" @toggle="onToggle" :notifications="props.notifications">
     <template #title> Företagets adress </template>
     <f-validation-form
-        @submit="emit('submit', props.panelName)"
+        @submit="onSubmit"
         :before-submit="onBeforeSubmit"
+        :before-validation="onBeforeValidation"
+        :use-error-list="false"
     >
         <b-foretagets-adress :foretagets-adress="props.foretagetsAdress" />
-        <b-expandable-panel-button-save />
-        <b-expandable-panel-button-cancel @click="cancel" />
+        <b-expandable-panel-button-group @cancel="onCancel" />
     </f-validation-form>
 </f-expandable-panel>
 </template>

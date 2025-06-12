@@ -9,27 +9,32 @@ import {
 
 const kontaktuppgifter = ref(useKontaktuppgifterType());
 const foretagetsAdress = ref(useForetagetsAdressType());
-const nuvarandeOppenPanel = ref("");
+const currentOpenPanel = ref("");
 
 const onToggle = (panelName: string):void => {
     let open = isOpen(panelName);
-    if (open) nuvarandeOppenPanel.value = "";
-    else nuvarandeOppenPanel.value = panelName;
+    if (open) currentOpenPanel.value = "";
+    else currentOpenPanel.value = panelName;
 }
 
 const isOpen = (panelName: string): boolean => {
-    if (nuvarandeOppenPanel.value === panelName) return true;
+    if (currentOpenPanel.value === panelName) return true;
     return false;
 }
 
 const onSubmit = (panelName: string) => {
     console.log("onSubmit(" + panelName + ")");
-    nuvarandeOppenPanel.value = "";
+    currentOpenPanel.value = "";
 }
 
 const onBeforeSubmit = async (panelName: string) => {
     console.log("onBeforeSubmit(" + panelName + ")");
     //return FValidationFormAction.CONTINUE;
+}
+
+const onCancel = (panelName: string) => {
+    console.log("onCancel(" + panelName + ")");
+    currentOpenPanel.value = "";
 }
 
 
@@ -43,6 +48,8 @@ const onBeforeSubmit = async (panelName: string) => {
         :expanded="isOpen('KONTAKTUPPGIFTER')"
         @toggle="onToggle"
         @submit="onSubmit"
+        @before-submit="onBeforeSubmit"
+        @cancel="onCancel"
     />
     
     <b-expandable-panel-foretagets-adress
@@ -51,7 +58,8 @@ const onBeforeSubmit = async (panelName: string) => {
         :expanded="isOpen('FORETAGETSADRESS')"
         @toggle="onToggle"
         @submit="onSubmit"
-        @on-before-submit="onBeforeSubmit"
+        @before-submit="onBeforeSubmit"
+        @cancel="onCancel"
     />
 
     <!--f-expandable-panel :expanded="isOpen('SAMMANSTALLNING')" @toggle="onToggle('SAMMANSTALLNING')">

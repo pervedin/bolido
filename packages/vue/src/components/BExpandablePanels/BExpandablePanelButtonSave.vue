@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const emit = defineEmits(['click']);
 </script>
 <template>
-<button type="submit" @click="emit('click')" class="button button--full-width button--primary button-group__item">
+<button type="submit" class="button button-group__item button--primary button--large">
     Spara
 </button>
 </template>

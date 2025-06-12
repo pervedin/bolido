@@ -2,7 +2,7 @@
 const emit = defineEmits(['click']);
 </script>
 <template>
-<button @click="emit('click')" class="button button--full-width button--primary button-group__item">
+<button @click="emit('click')" type="button" class="button button-group__item button--secondary button--large">
     Avbryt
 </button>
 </template>
