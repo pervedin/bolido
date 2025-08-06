@@ -8,7 +8,12 @@
     "build": "vue-tsc -b && vite build"
   },
   "devDependencies": {
-    "@fkui/vue": "6.9.0",
-    "vue": "3.5.16"
+    "@fkui/vue": "6.14.0",
+    "@vitejs/plugin-vue": "5.2.4",
+    "@vue/tsconfig": "0.7.0",
+    "typescript": "5.9.2",
+    "vite": "6.3.5",
+    "vue": "3.5.18",
+    "vue-tsc": "3.0.5"
   }
 }
