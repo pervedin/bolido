@@ -5,10 +5,5 @@
   "type": "module",
   "scripts": {
     "build": "vue-tsc -b && vite build"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "5.2.4",
-    "@vue/tsconfig": "0.7.0",
-    "vite": "6.3.5"
   }
 }

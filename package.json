@@ -20,7 +20,10 @@
     "vedin.pp.se"
   ],
   "devDependencies": {
-    "lerna": "8.2.3"
+    "lerna": "8.2.3",
+    "vite": "6.3.5",
+    "@vitejs/plugin-vue": "5.2.4",
+    "@vue/tsconfig": "0.7.0"
   },
   "scripts": {
     "build": "lerna run build --stream",
